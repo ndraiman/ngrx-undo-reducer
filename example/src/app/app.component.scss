@@ -1,0 +1,11 @@
+:host {
+  .counter-buttons,
+  .undo-buttons {
+    display: flex;
+    margin-top: 5px;
+
+    > button {
+      margin: 0 5px;
+    }
+  }
+}

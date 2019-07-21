@@ -1,0 +1,51 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/tmp
+/svg-temp
+
+/build artifacts
+dist/
+/server/dist
+node_modules/
+*.gz
+*.tgz
+
+# dependencies
+/node_modules
+server/node_modules
+example/node_modules
+/bower_components
+
+# IDEs and editors
+.project
+.classpath
+.idea/
+.gradle/
+.node/
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/server/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+*.iml
+
+etc/
+logs/
+.rpt2_cache/

@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1 style="text-align:center">
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <div>Counter: {{ counter$ | async }}</div>
+    <div class="counter-buttons">
+      <button (click)="inc()">Inc</button>
+      <button (click)="dec()">Dec</button>
+    </div>
+
+    <h3>Reducer State</h3>
+
+    <div>{{ state$ | async | json }}</div>
+    <div class="undo-buttons">
+      <button (click)="undo()" [disabled]="!(canUndo$ | async)">undo</button>
+      <button (click)="redo()" [disabled]="!(canRedo$ | async)">redo</button>
+    </div>
+    <div class="undo-buttons">
+      <button (click)="bookmark()">Bookmark</button>
+      <button (click)="revertToBookmark()" [disabled]="!(hasBookmark$ | async)">Revert to Bookmark</button>
+    </div>
+    <div class="undo-buttons">
+      <button (click)="clearHistory()">Clear History</button>
+      <button (click)="init()">Init</button>
+    </div>
+  </div>
+</div>
+
+
