@@ -1,12 +1,6 @@
 module.exports = {
-	globals: {
-		'ts-jest': {
-			stringifyContentPathRegex: '\\.html?$',
-			tsConfig: 'tsconfig.spec.json'
-		}
-	},
 	transform: {
-		'^.+\\.tsx?$': 'ts-jest'
+		'^.+\\.tsx?$': ['ts-jest', { stringifyContentPathRegex: '\\.html?$', tsconfig: 'tsconfig.spec.json' }]
 	},
 	testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
 	moduleFileExtensions: ['html', 'js', 'ts'],

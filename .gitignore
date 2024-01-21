@@ -49,3 +49,5 @@ Thumbs.db
 etc/
 logs/
 .rpt2_cache/
+
+example/.angular

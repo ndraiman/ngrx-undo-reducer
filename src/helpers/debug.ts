@@ -19,7 +19,7 @@ export class Debug {
 	private printBuffer() {
 		const { header, prev, next, action, msgs } = this.displayBuffer;
 
-		if (console.group) {
+		if (!!console.group) {
 			console.groupCollapsed(...header);
 			console.log(...prev);
 			console.log(...action);
@@ -42,7 +42,7 @@ export class Debug {
 	start<T>(action: Action, state: HistoryState<T>) {
 		this.initBuffer();
 		if (this.enabled) {
-			if (console.group) {
+			if (!!console.group) {
 				this.displayBuffer.header = [
 					'%c[ ngrx-undo-reducer ]',
 					`font-style: italic; color: ${DebugColors.header};`,
@@ -61,7 +61,7 @@ export class Debug {
 
 	end<T>(nextState: HistoryState<T>, result?: string) {
 		if (this.enabled) {
-			if (console.group) {
+			if (!!console.group) {
 				this.displayBuffer.next = this.colorFormat('next history', DebugColors.nextState, nextState);
 			} else {
 				this.displayBuffer.next = ['next history', nextState];
