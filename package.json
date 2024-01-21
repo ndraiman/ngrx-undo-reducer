@@ -1,6 +1,6 @@
 {
   "name": "ngrx-undo-reducer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Undoable reducer for @ngrx/store",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
